@@ -1,0 +1,32 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Trading Site</title>
+</head>
+<body>
+
+<h1>Welcome to My Trading Site</h1>
+<p>Connect your Deriv account below:</p>
+
+<button onclick="connect()">Connect to Deriv</button>
+
+<script>
+function connect() {
+  const ws = new WebSocket('wss://ws.derivws.com/websockets/v3');
+
+  ws.onopen = function() {
+    ws.send(JSON.stringify({
+      authorize: "YOUR_API_TOKEN"
+    }));
+  };
+
+  ws.onmessage = function(msg) {
+    alert("Connected successfully!");
+    console.log(msg.data);
+  };
+}
+</script>
+
+</body>
+</html>
