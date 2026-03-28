@@ -1,0 +1,14 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Costa Trading Site</title>
+</head>
+<body>
+    <h1>Welcome Costa 🚀</h1>
+    <p>This is my Deriv trading website.</p>
+
+    <button>Trade Over</button>
+    <button>Trade Under</button>
+</body>
+</html>
